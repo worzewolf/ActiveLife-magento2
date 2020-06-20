@@ -1,0 +1,111 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .activelife-page-title{
+        .lib-flex-center_active_life();
+        color: @active_life_color-white;
+        height: 100vh;
+        background: url('@{baseDir}images/homepage.jpeg') no-repeat center;
+        background-size: cover;
+        text-align: center;
+        flex-direction: column;
+        z-index: 0;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background: @active_life_color-black;
+            opacity: .3;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .title-crossline {
+            width: 80px;
+        }
+    }
+
+    .active-life-category-subtitle,
+    .active-life-category-title {
+        font-weight: @font-weight__bolder;
+    }
+
+    .articles-parent-block {
+        .lib-flex-center_active_life();
+        text-align: center;
+        margin-top: -155px;
+
+        .article_block {
+            padding: 0 45px;
+            margin: 30px 0;
+            max-width: 200px;
+        }
+    }
+
+    .active-articles-title {
+        color: @active_life_color-terraCotta;
+        font-weight: @font-weight__regular;
+        text-transform: uppercase;
+    }
+
+    .active-articles-shortcut-link {
+        font-weight: @font-weight__bolder;
+        position: relative;
+
+        &:hover {
+            color: @active_life_color-white;
+            text-decoration: none;
+        }
+
+        &:after {
+            .lib-font-awesome_active_life();
+            content: @active_life-icon-long_arrow_right;
+            padding-left: 10px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .articles-parent-block .articles:nth-child(2) .article_block {
+        border-left: 1px solid @active_life_color-gainsboro;
+        border-right: 1px solid @active_life_color-gainsboro;
+    }
+
+    .active-life-category-title {
+        text-align: center;
+        font-size: 8rem;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .active-life-category-title {
+        font-size: 5rem;
+    }
+    .articles-parent-block {
+        background: @active_life_color-stTropaz;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px 0 40px;
+
+        .articles:nth-child(2) {
+            max-width: 205px;
+            border-top: 1px solid @active_life_color-gainsboro;
+            border-bottom: 1px solid @active_life_color-gainsboro;
+
+            .article_block {
+                padding: 0;
+                border: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+<?php
+/**
+ *Active_Life magento_theme Customer account dashboard info template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+
+/** @var \Magento\Customer\Block\Account\Dashboard\Info $block */
+?>
+<div class="block block-dashboard-info">
+    <div class="block-content">
+        <div class="box box-information">
+            <i class="far fa-file-alt"></i>
+            <strong class="box-title">
+                <span><?= $block->escapeHtml(__('My Orders')) ?></span>
+            </strong>
+            <div class="box-content">
+                <p>
+                    <?= $block->escapeHtml(__('Track your orders, return or buy items you\'ve bought before')) ?><br>
+                </p>
+            </div>
+            <div class="box-actions">
+                <a class="action edit" href="<?= $block->escapeUrl($block->getUrl('sales/order/history')) ?>">
+                    <span><?= $block->escapeHtml(__('View my orders')) ?></span>
+                </a>
+            </div>
+        </div>
+        <div class="box box-information">
+            <i class="fas fa-user"></i>
+            <strong class="box-title">
+                <span><?= $block->escapeHtml(__('Contact Information')) ?></span>
+            </strong>
+            <div class="box-content">
+                <p>
+                    <?= $block->escapeHtml(__('Already a member? Sign in to recieve an exclusive')) ?><br>
+                </p>
+                <?= $block->getChildHtml('customer.account.dashboard.info.extra'); ?>
+            </div>
+            <div class="box-actions">
+                <a class="action edit" href="<?= $block->escapeUrl($block->getUrl('customer/account/edit')) ?>">
+                    <span><?= $block->escapeHtml(__('Edit')) ?></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+//
+//  Typography
+//  ---------------------------------------------
+
+//  Fonts
+@font-family-name__base: 'Open Sans';
+@font-family-name_font-awesome: Font Awesome\ 5 Free;
+@active_life_icons-font-family: @font-family-name_font-awesome;
+
+//
+// Colors
+//_______________________________________________
+
+@active_life_color-white: #ffffff;
+@active_life_color-gainsboro: #dedcdc;
+@active_life_color-black: #000000;
+@active_life_color-santasGrey: #9190ac;
+@active_life_color-irisBlue: #05adc6;
+@active_life_color-stTropaz: #37588b;
+@active_life_color-terraCotta: #d97662;
+
+//
+// Fonts
+//__________________________________________________
+
+@font-weight__bolder: 900;
+@font-size__activeLife-xl: 30px;
+
+//
+// Icons
+// _______________________________________________
+
+@active_life-icon-long_arrow_right: '\f30b';
+
+//
+// Mixin
+// __________________________________________________
+
+.lib-font-awesome_active_life() {
+  font-family: @active_life_icons-font-family;
+  font-weight: @font-weight__bolder;
+}
+
+.lib-flex-center_active_life() {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}

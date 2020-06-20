@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magento_Theme::css/owl.carousel.css"/>
+    </head>
+    <body>
+        <referenceBlock name="logo" remove="true"/>
+        <referenceBlock name="minicart" remove="true"/>
+        <referenceBlock name="top.search" remove="true"/>
+        <referenceBlock name="page.top" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="header.links" remove="true"/>
+        <referenceBlock name="page.main.title" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceContainer name="header-wrapper" remove="true"/>
+        <move element="authorization-link-login" destination="header.panel" before="-"/>
+        <move element="my-account-link" destination="footer_links" before="-"/>
+    </body>
+</page>

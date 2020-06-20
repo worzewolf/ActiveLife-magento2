@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="page.main.title" remove="true"/>
+        <referenceBlock name="content" remove="true"/>
+        <referenceContainer name="main">
+            <block class="Magento\Framework\View\Element\Template" name="active-articles.parent" template="Magento_Cms::active-articles.phtml">
+                <arguments>
+                    <argument name="active-life_title" translate="true" xsi:type="string">ActiveLife</argument>
+                    <argument name="active-life_subtitle" translate="true" xsi:type="string">Good health through smarter products</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\Template" name="active.article.child.block1"
+                       template="Magento_Cms::active-articles-child.phtml">
+                    <arguments>
+                        <argument name="article_title" translate="true" xsi:type="string">shona vertue</argument>
+                        <argument name="article_shortcut" translate="true" xsi:type="string">Read the PT's tips to improve your wellbeing</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="active.article.child.block2"
+                       template="Magento_Cms::active-articles-child.phtml">
+                    <arguments>
+                        <argument name="article_title" translate="true" xsi:type="string">realise health</argument>
+                        <argument name="article_shortcut" translate="true" xsi:type="string">Understand your body with our range of at-home health assessments</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="active.article.child.block3"
+                       template="Magento_Cms::active-articles-child.phtml">
+                    <arguments>
+                        <argument name="article_title" translate="true" xsi:type="string">puregym</argument>
+                        <argument name="article_shortcut" translate="true" xsi:type="string">Smash your fitness goals in the UK's largest gym chain</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

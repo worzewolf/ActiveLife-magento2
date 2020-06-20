@@ -1,0 +1,19 @@
+<?php
+/**
+ *Active_Life default Cms active-articles template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+<?php if($block->hasData('active-life_title') && $block->getData('active-life_title')) : ?>
+<div class="activelife-page-title">
+    <h1 class="active-life-category-title"><?= $block->getData('active-life_title') ?></h1>
+    <hr class="title-crossline">
+    <h2 class="active-life-category-subtitle"><?= $block->getData('active-life_subtitle') ?></h2>
+</div>
+<?php endif;?>
+<div class="articles-parent-block">
+    <?= $block->getChildHtml('active.article.child.block1') ?>
+    <?= $block->getChildHtml('active.article.child.block2') ?>
+    <?= $block->getChildHtml('active.article.child.block3') ?>
+</div>

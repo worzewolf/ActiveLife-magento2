@@ -1,0 +1,21 @@
+<?php
+/**
+ *Active_Life default Cms active-articles-child template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+<?php
+$article_title = $block->hasData('article_title') && $block->getData('article_title');
+$article_shortcut = $block->hasData('article_shortcut') && $block->getData('article_shortcut');
+?>
+<div class="articles">
+    <div class="article_block">
+        <?php if ($article_title) : ?>
+            <h4 class="active-articles-title"><?= $block->getData('article_title')?></h4>
+        <?php endif;?>
+        <?php if ($article_shortcut) : ?>
+            <a href="#" class="active-articles-shortcut-link"><?= $block->getData('article_shortcut')?></a>
+        <?php endif;?>
+    </div>
+</div>

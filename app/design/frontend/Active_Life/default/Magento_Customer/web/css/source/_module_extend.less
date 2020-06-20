@@ -1,0 +1,90 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .login-container {
+        padding: 40px;
+    }
+
+    .block .block-content .box {
+        border: 1px solid @active_life_color-black;
+    }
+
+    .block.block-dashboard-info {
+        float: left;
+
+        .block-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    .block.block-dashboard-addresses .block-content,
+    .block.block-dashboard-info {
+        display: flex;
+
+        .box-information,
+        .box-billing-address {
+            max-width: 250px;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        .box-actions .action {
+            color: @active_life_color-stTropaz;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            span:after {
+                .lib-font-awesome_active_life();
+                content: @active_life-icon-long_arrow_right;
+                padding-left: 10px;
+            }
+        }
+
+        .fas, .far {
+            font-size: @font-size__activeLife-xl;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+
+    .page-main .columns .column.main .block-dashboard-addresses {
+        display: flex;
+        min-width: max-content;
+
+        .block-content .box.box-billing-address {
+            width: 100%;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .sidebar-main .block-collapsible-nav {
+        margin-top: 20px;
+    }
+
+    .block.block-dashboard-info {
+        margin: 60px 0 20px;
+
+        .block-content {
+            flex-direction: column;
+        }
+    }
+    .block.block-dashboard-addresses .block-content,
+    .block.block-dashboard-info {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .columns .column.main .block-dashboard-addresses {
+        float: left;
+        width: 100%;
+    }
+}

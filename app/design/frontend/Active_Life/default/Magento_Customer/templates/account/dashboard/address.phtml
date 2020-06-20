@@ -1,0 +1,27 @@
+<?php
+/**
+ *Active_Life magento_theme Customer account dashboard address template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+
+/** @var \Magento\Customer\Block\Account\Dashboard\Address $block */
+?>
+<div class="block block-dashboard-addresses">
+    <div class="block-content">
+        <div class="box box-billing-address">
+            <i class="fas fa-map-marker"></i>
+            <strong class="box-title">
+                <span><?= $block->escapeHtml(__('Default Billing Address')) ?></span>
+            </strong>
+            <div class="box-content">
+                <p>
+                    <?= $block->escapeHtml(__('Edit address and your delivery preferences')) ?><br>
+                </p>
+            </div>
+            <div class="box-actions">
+                <a class="action edit" href="<?= $block->escapeUrl($block->getPrimaryBillingAddressEditUrl()) ?>" data-ui-id="default-billing-edit-link"><span><?= $block->escapeHtml(__('Edit Address')) ?></span></a>
+            </div>
+        </div>
+    </div>
+</div>
